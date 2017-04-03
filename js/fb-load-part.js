@@ -1,3 +1,4 @@
+// Load FB api by 
 window.fbAsyncInit = function() {
   FB.init({
     appId: '250498388745988',
@@ -21,7 +22,6 @@ window.fbAsyncInit = function() {
 
 
 function showData() {
-
   var list = [];
   for (var i = 0; i < likes.length; i++)
     list.push({
@@ -42,30 +42,33 @@ function showData() {
     story_url[k] = list[k].story_url
   }
   $(".sk-cube-grid").hide();
-  var fb_content = document.getElementById("post-preview")
+  var fb_content = document.getElementById("post-preview");
   for (var i = 0; i < 5; i++) {
-    var author = message[i].split("---")[1]
-    message[i] = message[i].split("---")[0]
-    fb_content.innerHTML += "<a href="
-                          + story_url[i] 
-                          + "><h2 class='post-title' style='font-family: Microsoft JhengHei'>" 
+    var author = getAuthor(message[i])
+    message[i] = getMessage(message[i])
+    fb_content.innerHTML += "<div id='content' data-toggle='modal' data-target='#content-modal' onclick='showModal("
+                          + i
+                          + ")'>"
+                          + "<h2 class='post-title' style='font-family: Microsoft JhengHei'>" 
                           + "主顧榮譽書院劇場          " 
                           + "<img src='img/likes.jpg' width='4%'>" 
                           + likes[i] 
-                          + "</h2>" 
+                          + "</h2>"
+                          + "<pre>" 
                           + "<h3 class='post-subtitle' style='font-family: Microsoft JhengHei'>" 
-                          + message[i] 
+                          + message[i].slice(0, 250)
+                          + ((message[i].length >= 250) ? " ...\n\n<觀看全文>" : "")
                           + "</h3>" 
-                          + "</a>" 
-                          + "<p class='post-meta'>Posted by <a href='#'> "
-                          + (typeof(author) === 'undefined'? "不知道 " : author + "  ")
+                          + "</pre>"
+                          + "</div>" 
+                          + "<p>Posted by <a href='#'> "
+                          + author
                           + "</a>" 
                           + created_time[i].split("T")[0] 
                           + "</p>" + "<hr>"
     fb_content.style.opacity = 1 
-    fb_content.style.top = 0
+    fb_content.style.top = 0;
   }
-
 }
 
 var likes = []
@@ -90,7 +93,6 @@ var getPosts = function(response) {
   }
 
   if (typeof(response.paging) === "undefined" || typeof(response.paging.next) === "undefined") {
-
     showData()
   } else {
     nextPage = response.paging.next
@@ -110,3 +112,41 @@ function getLoginStatus(response) {
     }, getPosts
   );
 }
+
+function getAuthor(message) {
+  var author = ""
+  for (var i = message.length - 1; i >= message.length - 4; i--) {
+    if (message[i] === '-') break;
+    author = message[i] + author
+  }
+  if (message[message.length - 4] !== '-') 
+    return "劇場小編 "
+  else 
+    return author + " "
+}
+
+function getMessage(message) {
+  var content = ""
+  if (message[message.length - 4] !== '-')  {
+    return message
+  }
+  else {
+    var boo = false
+    for (var i = message.length - 5; i >= 0; i--) {
+      if (message[i] !== '-' && boo == false) {
+        boo = true
+        content = message[i] + content
+      }
+      if (boo == true)
+        content = message[i] + content
+    }
+  }
+  return content
+}
+
+function showModal(show_id) {
+  console.log(message[show_id])
+  document.getElementById("modal-body").innerHTML = message[show_id]
+  document.getElementById("modal-story-url").href = story_url[show_id]
+}
+
