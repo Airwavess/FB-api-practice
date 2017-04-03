@@ -1,0 +1,25 @@
+.navbar-brand, .navbar-right, .modal-title, #modal-body{
+	font-family: Microsoft JhengHei;
+}
+
+.modal-title {
+	font-size: 25px;
+}
+
+pre {
+	background-color: white;
+	border: 0px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+#content:hover, .post-subtitle:hover {
+	cursor: pointer;
+	color: #0085A1;
+}
+
+#modal-story-url, #post-preview a {
+	text-decoration: none;
+}
