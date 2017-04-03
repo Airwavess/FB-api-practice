@@ -74,10 +74,13 @@ var created_time = []
 var story_url = []
 var getPosts = function(response) {
   var myObj = response
+  console.log(response)
   for (var i = 0; i < myObj.data.length; i++) {
     if (myObj.data[i] != null) {
       if (typeof(myObj.data[i].likes) !== "undefined") {
         likes.push(myObj.data[i].likes.data.length)
+      } else {
+        likes.push(0)
       }
       message.push(myObj.data[i].message)
       created_time.push(myObj.data[i].created_time)
@@ -103,7 +106,7 @@ function getLoginStatus(response) {
     'GET', {
       "access_token": accessToken,
       "limit": 100,
-      "fields": "likes, message, created_time, id",
+      "fields": "likes.limit(100), message, created_time, id",
     }, getPosts
   );
 }

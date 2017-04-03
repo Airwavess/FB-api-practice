@@ -77,8 +77,13 @@ var getPosts = function(response) {
   for (var i = 0; i < myObj.data.length; i++) {
     if (myObj.data[i] != null) {
       if (typeof(myObj.data[i].likes) !== "undefined") {
+        console.log(myObj.data[i].message)
+        console.log(myObj.data[i].likes)
+        console.log(myObj.data[i].likes.data.length)
         likes.push(myObj.data[i].likes.data.length)
-      }
+      } else if (typeof(myObj.data[i].likes) === "undefined") {
+        likes.push(0)
+      } 
       message.push(myObj.data[i].message)
       created_time.push(myObj.data[i].created_time)
       id = myObj.data[i].id.split("_")[1]
@@ -102,7 +107,7 @@ function getLoginStatus(response) {
     'GET', {
       "access_token": accessToken,
       "limit": 100,
-      "fields": "likes, message, created_time",
+      "fields": "likes.limit(100), message, created_time",
     }, getPosts
   );
 }
