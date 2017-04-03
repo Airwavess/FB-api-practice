@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>Clean Blog - About</title>
+  <meta name="description" content="你將可以在這個網頁上看到「主顧榮譽書院劇場」的所有文章，另外可以在首頁最熱門的 5 則成功故事 😆">
+  <meta name="author" content="Leo Chiu">
+  <title>LIKES RANKER</title>
   <!-- Bootstrap Core CSS -->
+  <link rel="Shortcut Icon" type="image/x-icon" href="img/favicon.ico">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Theme CSS -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
@@ -29,29 +30,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-  <style type="text/css"> 
-  .loader {
-    border: 8px solid #f3f3f3;
-    /* Light grey */
-    border-top: 8px solid #3498db;
-    /* Blue */
-    margin: 0 auto;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  </style>
+  <link rel="stylesheet" type="text/css" href="css/loading-animation.css">
 </head>
 
 <body>
@@ -63,15 +42,21 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="index.html">主 顧 榮 譽 書 院 劇 場</a>
+        <a class="navbar-brand" href="index.html" style="font-family: Microsoft JhengHei">主 顧 榮 譽 書 院 劇 場</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li>
+          <li style="font-family: Microsoft JhengHei">
             <a href="index.html">Home</a>
           </li>
-          <li>
+          <li style="font-family: Microsoft JhengHei">
+            <a href="other.html">Other Post</a>
+          </li>
+          <li style="font-family: Microsoft JhengHei">
+            <a href="https://www.facebook.com/%E4%B8%BB%E9%A1%A7%E6%A6%AE%E8%AD%BD%E6%9B%B8%E9%99%A2%E5%8A%87%E5%A0%B4-170659829952078/?fref=ts">FB粉絲團</a>
+          </li>
+          <!--<li>
             <a href="about.html">About</a>
           </li>
           <li>
@@ -79,7 +64,7 @@
           </li>
           <li>
             <a href="contact.html">Contact</a>
-          </li>
+          </li>-->
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -93,9 +78,9 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           <div class="page-heading">
-            <h1>About Me</h1>
+            <h1>About Us</h1>
             <hr class="small">
-            <span class="subheading">This is what I do.</span>
+            <span class="subheading">This is what we do.</span>
           </div>
         </div>
       </div>
@@ -105,9 +90,28 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-preview" id="post-preview">
-          <div class="load"></div>
+        <div class="sk-cube-grid">
+          <div class="sk-cube sk-cube1"></div>
+          <div class="sk-cube sk-cube2"></div>
+          <div class="sk-cube sk-cube3"></div>
+          <div class="sk-cube sk-cube4"></div>
+          <div class="sk-cube sk-cube5"></div>
+          <div class="sk-cube sk-cube6"></div>
+          <div class="sk-cube sk-cube7"></div>
+          <div class="sk-cube sk-cube8"></div>
+          <div class="sk-cube sk-cube9"></div>
         </div>
+        <div class="post-preview" id="post-preview">
+        </div>
+        <nav aria-label="...">
+          <ul class="pagination">
+            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a></li>
+
+          </ul>
+        </nav>
         <!-- Pager -->
         <ul class="pager">
           <li class="next">
@@ -132,7 +136,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://github.com/Airwavess/FB-api-practice">
                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
