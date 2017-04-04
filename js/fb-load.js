@@ -31,16 +31,13 @@ function showData() {
       'story_url': story_url[i]
     });
 
-  list.sort(function(likes_1, likes_2) {
-    return ((likes_1.likes > likes_2.likes) ? -1 : ((likes_1.likes == likes_2.likes) ? 0 : 1))
-  });
-
   for (var k = 0; k < list.length; k++) {
     likes[k] = list[k].likes
     message[k] = list[k].message
     created_time[k] = list[k].created_time
     story_url[k] = list[k].story_url
   }
+  
   $(".sk-cube-grid").hide();
   var fb_content = document.getElementById("post-preview");
   for (var i = 0; i < likes.length; i++) {
