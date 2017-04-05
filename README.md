@@ -1,24 +1,9 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/)
+#  [Likes Ranker](http://bookstore.lionfree.net/likes_ranker/) - [Start Bootstrap](http://startbootstrap.com/)
 
-[Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/) is a stylish, responsive blog theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working PHP contact form.
-
-## Getting Started
-
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/clean-blog/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-clean-blog.git`
-* Fork the repo
+[Likes Ranker](http://bookstore.lionfree.net/likes_ranker/) is a stylish, responsive website created by [Start Bootstrap](http://startbootstrap.com/). This website features the success stories from [Providence Honer School](https://www.facebook.com/%E4%B8%BB%E9%A1%A7%E6%A6%AE%E8%AD%BD%E6%9B%B8%E9%99%A2%E5%8A%87%E5%A0%B4-170659829952078/?fref=ts), which my be due to compeition, internships, courses, community success stories. If you want to know what honer school's student usually do, you will see the most popular success stories of five article at homepage and the storise recently published at "all post".
 
 ## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-clean-blog/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/clean-blog/).
+Have a bug or an issue with this website? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-clean-blog/issues) here on GitHub or leave a comment on the [Providence Honer School](https://www.facebook.com/%E4%B8%BB%E9%A1%A7%E6%A6%AE%E8%AD%BD%E6%9B%B8%E9%99%A2%E5%8A%87%E5%A0%B4-170659829952078/?fref=ts).
 
-## Creator
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
